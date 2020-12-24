@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vue之数据双向传递</title>
+    <style>
+        [v-cloak] {
+            display: none
+        }
+    </style>
+    <script src="./js/vue.js"></script>
+</head>
+
+<body>
+    <div id="app">
+        <p v-cloak>{{ name }}</p>
+    </div>
+    <script>
+        setTimeout(function() {
+            let vue = new Vue({
+                el: '#app',
+                data: {
+                    name: "霜序廿",
+                }
+            });
+        }, 3000);
+    </script>
+</body>
+
+</html>
