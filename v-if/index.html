@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> v-if</title>
+    <script src="./js/vue.js"></script>
+</head>
+
+<body>
+    <div id="app">
+        <!--    <p v-if="show">我是true</p>-->
+        <!--    <p v-if="hidden">我是false</p>-->
+        <!--    <p v-if="true">我是true</p>-->
+        <!--    <p v-if="false">我是false</p>-->
+        <!--    <p v-if="age >= 18">我是true</p>-->
+        <!--    <p v-if="age < 18">我是false</p>-->
+
+        <!--    <p v-if="age >= 18">成年人</p>-->
+        <!--    <p>中间的内容</p>-->
+        <!--    <p v-else>未成年人</p>-->
+
+        <p v-if="score >= 80">优秀</p>
+        <p v-else-if="score >= 60">良好</p>
+        <p v-else>差</p>
+    </div>
+    <script>
+        // 这里就是MVVM中的View Model
+        let vue = new Vue({
+            el: '#app',
+            // 这里就是MVVM中的Model
+            data: {
+                show: true,
+                hidden: false,
+                age: 17,
+                score: 50
+            }
+        });
+    </script>
+</body>
+
+</html>
