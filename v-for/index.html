@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>v-show</title>
+    <script src="./js/vue.js"></script>
+</head>
+
+<body>
+    <div id="app">
+        <ul>
+            <li v-for="(value, index) in list">{{index}}---{{value}}</li>
+            <!-- <li v-for="(value, index) in 'abcdefg'">{{index}}---{{value}}</li> -->
+            <!-- <li v-for="(value, index) in 6">{{index}}---{{value}}</li> -->
+            <li v-for="(value, key) in obj">{{key}}---{{value}}</li>
+        </ul>
+    </div>
+    <script>
+        let vue = new Vue({
+            el: '#app',
+            data: {
+                list: ["张三", "李四", "王五", "赵六"],
+                obj: {
+                    name: "霜序廿",
+                    age: 22,
+                    gender: "man",
+                    class: "SAU"
+                }
+            }
+        });
+    </script>
+</body>
+
+</html>
