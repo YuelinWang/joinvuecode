@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> v-if</title>
+    <script src="./js/vue.js"></script>
+</head>
+
+<body>
+    <div id="app">
+        <!-- <p>{{name}}</p> -->
+        <!-- <p v-text="name"></p> -->
+        <!-- <p v-html="name"></p> -->
+        <!-- <input type="text" value="{{name}}"> -->
+        <!-- <input type="text" v-model="name"> -->
+        <!-- <input type="text" v-bind:value="name"> -->
+        <!-- <input type="text" :value="name"> -->
+        <!-- <input type="text" :value="age + 1"> -->
+    </div>
+    <script>
+        let vue = new Vue({
+            el: '#app',
+            data: {
+                name: "霜序廿",
+                age: 22
+            }
+        });
+    </script>
+</body>
+
+</html>

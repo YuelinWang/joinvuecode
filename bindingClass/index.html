@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>绑定类名</title>
+    <script src="./js/vue.js"></script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        
+        .size {
+            font-size: 100px;
+        }
+        
+        .color {
+            color: red;
+        }
+        
+        .active {
+            background: skyblue;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="app">
+        <!-- <p class="size color active">我是段落</p> -->
+        <!-- <p :class="size">我是段落</p> -->
+        <!-- <p :class="[size]">我是段落</p> -->
+        <!-- <p :class="['size', 'color', 'active']">我是段落</p> -->
+        <!-- <p :class="['size', 'color', flag ? 'active' : '']">我是段落</p> -->
+        <!-- <p :class="['size', 'color',{'active' : false}]">我是段落</p> -->
+        <!-- <p :class="obj">我是段落</p> -->
+    </div>
+    <script>
+        let vue = new Vue({
+            el: '#app',
+            data: {
+                flag: false,
+                obj: {
+                    'size': false,
+                    'color': false,
+                    'active': false,
+                }
+            }
+        });
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>13-绑定样式</title>
+    <script src="./js/vue.js"></script>
+</head>
+
+<body>
+    <div id="app">
+        <!-- <p style="color: red">我是段落</p> -->
+        <!-- <p :style="color: red">我是段落</p> -->
+        <!-- <p :style="{color: 'red'}">我是段落</p> -->
+        <!-- <p :style="{color: 'red', 'font-size': '100px'}">我是段落</p> -->
+        <!-- <p :style="obj">我是段落</p> -->
+        <!-- <p :style="[obj1, obj2]">我是段落</p> -->
+    </div>
+    <script>
+        // 这里就是MVVM中的View Model
+        let vue = new Vue({
+            el: '#app',
+            // 这里就是MVVM中的Model
+            data: {
+                obj1: {
+                    "color": "blue",
+                    "font-size": "100px"
+                },
+                obj2: {
+                    "background-color": "red"
+                }
+            }
+        });
+    </script>
+</body>
+
+</html>

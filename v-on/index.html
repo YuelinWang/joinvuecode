@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>v-on</title>
+    <script src="./js/vue.js"></script>
+</head>
+
+<body>
+    <div id="app">
+        <!-- <button onclick="alert('霜序廿')">我是按钮</button> -->
+        <!-- <button v-on:click="alert('霜序廿')">我是按钮</button> -->
+        <!-- <button v-on:click="myFn">我是按钮</button> -->
+        <!-- <button @click="myFn">我是按钮</button> -->
+    </div>
+    <script>
+        let vue = new Vue({
+            el: '#app',
+            data: {},
+            methods: {
+                myFn() {
+                    alert('霜序廿')
+                }
+            }
+        });
+    </script>
+</body>
+
+</html>

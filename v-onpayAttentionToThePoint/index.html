@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>v-on注意点</title>
+    <script src="./js/vue.js"></script>
+</head>
+
+<body>
+    <div id="app">
+        <button @click="myFn('sxn', 22, $event)">我是按钮</button>
+    </div>
+    <script>
+        let vue = new Vue({
+            el: '#app',
+            data: {
+                gender: "man"
+            },
+            methods: {
+                myFn(name, age, e) {
+                    // alert('sxn');
+                    console.log(name, age, e);
+                    console.log(this.gender);
+                }
+            }
+        });
+    </script>
+</body>
+
+</html>
